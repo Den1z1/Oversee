@@ -1,0 +1,89 @@
+<resources>
+    <string name="app_name">Oversee</string>
+
+    <string name="name_title">Название</string>
+    <string name="enter_name">Введите название</string>
+
+    <string name="save">Сохранить</string>
+    <string name="delete">Удалить</string>
+    <string name="cancel">Отменить</string>
+    <string name="proceed">Продолжить</string>
+    <string name="change">Изменить</string>
+
+    <string name="dialog_cancel">Отмена</string>
+
+    <string name="home">Дом</string>
+    <string name="add">Добавить</string>
+    <string name="settings">Настройки</string>
+
+    <string name="look">Просмотр</string>
+
+    <string name="default_time">00:00</string>
+
+    <string name="add_camera">Добавить камеру</string>
+    <string name="enter_ip_toast">Введите Ip адрес</string>
+    <string name="enter_name_toast">Введите название</string>
+    <string name="camera_ip_title">Адрес</string>
+    <string name="camera_ip_example">rtsp://admin:password@123.45.67.89:555</string>
+    <string name="camera_ip_info">Введите ссылку для подключения к видеокамере. Убедитесь, что адрес введен верно и доступен из вне</string>
+    <string name="camera_name_info">Введите название для видеокамеры</string>
+    <string name="add_camera_info">Введите данные RTSP потока видеокамеры\n\nПоддерживает только кодек H.264</string>
+    <string name="camera_not_found">Не удалось подключиться к камере. Проверьте соединение с интернетом или адресс камеры.</string>
+    <string name="connect_camera">Подключение…</string>
+
+    <string name="default_device_name">No name</string>
+    <string name="one">1</string>
+    <string name="two">2</string>
+    <string name="three">3</string>
+    <string name="four">4</string>
+    <string name="five">5</string>
+    <string name="six">6</string>
+    <string name="seven">7</string>
+    <string name="eight">8</string>
+    <string name="nine">9</string>
+    <string name="zero">0</string>
+    <string name="enter_password">Введите пароль</string>
+    <string name="entry_again_password">Введите пароль повторно</string>
+    <string name="entry_old_password">Введите старый пароль</string>
+
+    <string name="delete_camera_header">Удаление камеры</string>
+    <string name="delete_camera_text">Камера будет удалена безвозвратно. Вы уверены, что хотите удалить камеру?</string>
+
+    <string name="app_title">Приложение</string>
+    <string name="cameras_in_row">Количество камер в ряд на странице \"Дом\"</string>
+    <string name="enter_text">Введите текст</string>
+
+    <string name="close_app_title">Повторите для выхода.</string>
+
+    <string name="no_pin_code">Без пароля</string>
+    <string name="out">Выйти</string>
+    <string name="back">Назад</string>
+    <string name="enter_biometric_entry_info">Используйте отпечаток пальца или распознавание лица для входа в приложение</string>
+    <string name="enter_biometric_entry">Биометрическая аутентификация</string>
+    <string name="use_biometric_entry">Используйте отпечаток пальца или распознавание лица</string>
+
+    <string name="biometric_entry_settings">Вход в приложение по отпечатку пальца или распознаванию лица</string>
+    <string name="biometric_entry_settings_info">Установите в настройках вашего устройства отпечаток пальца или распознавание лица</string>
+
+    <string name="no_pin_title">Без пароля</string>
+    <string name="no_pin_info">Продолжить без пароля?\nПароль можно установить в настройках</string>
+
+    <string name="pin_code_set">Установить пин-код</string>
+    <string name="pin_code_change">Изменить пин-код</string>
+
+    <string name="exit_auth_header">Точно хотите выйти?</string>
+    <string name="exit_auth_info">Вcе камеры и пароли будут удаленны</string>
+
+    <string name="pin_error_header">Слишком много попыток</string>
+    <string name="pin_error_info">Все ваши камеры будут удаленны в целях безопасности</string>
+    <string name="ok">Понятно</string>
+
+    <string name="x_speed">X%1$s</string>
+
+    <string-array name="cameras_in_row_value">
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@android:id/background"
+        android:gravity="center_vertical|fill_horizontal">
+        <shape
+            android:shape="rectangle">
+            <size
+                android:width="200dp"
+                android:height="200dp" />
+            <gradient
+                android:angle="90"
+                android:centerColor="#10213d"
+                android:centerY="0.7"
+                android:endColor="#1E3966"
+                android:startColor="#0F0F0F" />
+        </shape>
+    </item>
+    <item
+        android:drawable="@drawable/ic_eye"
+        android:bottom="40dp"
+        android:left="40dp"
+        android:right="40dp"
+        android:top="40dp"/>
+</layer-list>

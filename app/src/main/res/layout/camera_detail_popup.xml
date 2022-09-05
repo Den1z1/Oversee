@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/popup_camera_detail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:paddingTop="10dp"
+    android:paddingBottom="0dp"
+    app:behavior_hideable="true"
+    app:behavior_peekHeight="0dp"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_fullscreen_dialog">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/header_camera_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="11dp"
+            android:paddingTop="9dp"
+            android:paddingEnd="11dp"
+            android:paddingBottom="9dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/camera_detail_close_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_comeback_arrow"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/main_gray_1" />
+
+            <TextView
+                android:id="@+id/camera_detail_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="@string/default_device_name"
+                android:textColor="@color/main_gray_1"
+                android:textSize="17sp"
+                app:layout_constraintBottom_toBottomOf="@+id/camera_detail_close_arrow"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/tabLayoutContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginEnd="18dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/header_camera_detail">
+
+            <ImageView
+                android:id="@+id/imageView22"
+                android:layout_width="296dp"
+                android:layout_height="40dp"
+                android:background="@drawable/background_dedicated_view"
+                app:layout_constraintBottom_toBottomOf="@+id/tabLayout"
+                app:layout_constraintEnd_toEndOf="@+id/tabLayout"
+                app:layout_constraintStart_toStartOf="@+id/tabLayout"
+                app:layout_constraintTop_toTopOf="@+id/tabLayout" />
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabLayout"
+                android:layout_width="292dp"
+                android:layout_height="36dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/background_custom_view"
+                android:backgroundTint="@color/white"
+                app:tabIndicator="@drawable/background_tab_view"
+                app:tabIndicatorAnimationMode="elastic"
+                app:tabIndicatorColor="@color/main_gray_2"
+                app:tabIndicatorGravity="center"
+                app:tabIndicatorHeight="36dp"
+                app:tabRippleColor="@null"
+                app:tabSelectedTextColor="@color/white"
+                app:tabTextAppearance="@style/tabText"
+                app:tabTextColor="@color/gray3"
+                app:tabGravity="fill"
+                app:tabMaxWidth="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/look" />
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/settings" />
+
+            </com.google.android.material.tabs.TabLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/look_layout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tabLayoutContainer">
+
+            <TextView
+                android:id="@+id/camera_connect_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:visibility="gone"
+                android:layout_margin="18dp"
+                android:text="@string/connect_camera"
+                android:textColor="@color/main_gray_1"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/stream_layout"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:visibility="visible"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" >
+
+                <com.otaliastudios.zoom.ZoomLayout
+                    android:id="@+id/zoom_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scrollbars="vertical|horizontal"
+                    app:alignment="center"
+                    app:animationDuration="280"
+                    app:flingEnabled="true"
+                    app:hasClickableChildren="false"
+                    app:horizontalPanEnabled="true"
+                    app:maxZoom="4"
+                    app:maxZoomType="zoom"
+                    app:minZoom="1"
+                    app:minZoomType="zoom"
+                    app:overPinchable="false"
+                    app:overScrollHorizontal="false"
+                    app:overScrollVertical="false"
+                    app:scrollEnabled="true"
+                    app:oneFingerScrollEnabled="true"
+                    app:twoFingersScrollEnabled="true"
+                    app:threeFingersScrollEnabled="true"
+                    app:transformation="centerInside"
+                    app:transformationGravity="auto"
+                    app:verticalPanEnabled="true"
+                    app:zoomEnabled="true"
+                    app:layout_constraintDimensionRatio="16:9"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/zoom_stream_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <org.videolan.libvlc.util.VLCVideoLayout
+                            android:id="@+id/videoLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/loader_layout"
+                            android:visibility="gone"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/blind_layout"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@color/white" />
+
+                            <ProgressBar
+                                android:id="@+id/stream_loader"
+                                style="@style/Widget.AppCompat.ProgressBar"
+                                android:layout_width="77dp"
+                                android:layout_height="72dp"
+                                android:layout_gravity="center"
+                                android:foregroundGravity="center_vertical|center|center_horizontal"
+                                android:longClickable="false"
+                                android:progressDrawable="@color/colorPrimaryDark"
+                                android:theme="@style/BlueLoader"
+                                app:layout_constraintBottom_toBottomOf="@+id/blind_layout"
+                                app:layout_constraintEnd_toEndOf="@+id/blind_layout"
+                                app:layout_constraintStart_toStartOf="@+id/blind_layout"
+                                app:layout_constraintTop_toTopOf="@+id/blind_layout" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </com.otaliastudios.zoom.ZoomLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/settings_layout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tabLayoutContainer">
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginBottom="18dp"
+                android:overScrollMode="never"
+                android:scrollbars="none"
+                app:layout_constraintBottom_toTopOf="@+id/delete_device"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/name_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="20dp"
+                        android:background="@drawable/background_detail_view">
+
+                        <TextView
+                            android:id="@+id/name_text"
+                            style="@style/textInView"
+                            android:text="@string/name_title"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <EditText
+                            android:id="@+id/input_name_detail"
+                            style="@style/editText"
+                            android:hint="@string/enter_name"
+                            app:layout_constraintBottom_toBottomOf="@+id/name_text"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/name_text" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/ip_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="20dp"
+                        android:background="@drawable/background_detail_view">
+
+                        <TextView
+                            android:id="@+id/ip_text"
+                            style="@style/textInView"
+                            android:text="@string/camera_ip_title"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <EditText
+                            android:id="@+id/input_ip_detail"
+                            style="@style/editText"
+                            android:hint="@string/camera_ip_example"
+                            app:layout_constraintBottom_toBottomOf="@+id/ip_text"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/ip_text" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </LinearLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+            <TextView
+                android:id="@+id/delete_device"
+                style="@style/textInView"
+                android:layout_width="match_parent"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="18dp"
+                android:background="@drawable/background_detail_view"
+                android:text="@string/delete"
+                android:textColor="@color/red1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

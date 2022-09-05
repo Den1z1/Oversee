@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="60dp">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_gradient"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/header"
+                style="@style/header"
+                android:text="@string/settings" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cameras_in_row_layout"
+                style="@style/containerView"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="28dp"
+                android:layout_marginEnd="18dp"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/headViewAppSettings">
+
+                <TextView
+                    android:id="@+id/cameras_in_row_title"
+                    style="@style/textName"
+                    android:layout_width="0dp"
+                    android:layout_marginTop="18dp"
+                    android:layout_marginEnd="7dp"
+                    android:layout_marginBottom="18dp"
+                    android:text="@string/cameras_in_row"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/cameras_in_row_spinner"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Spinner
+                    android:id="@+id/cameras_in_row_spinner"
+                    style="@style/SpinnerTheme"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:dropDownWidth="76dp"
+                    android:dropDownVerticalOffset="30dp"
+                    android:entries="@array/cameras_in_row_value"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:popupBackground="@drawable/background_custom_view"
+                    android:spinnerMode="dropdown"
+                    android:theme="@style/SpinnerItemStyle"
+                    app:layout_constraintBottom_toBottomOf="@+id/cameras_in_row_title"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/cameras_in_row_title" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/change_pin_layout"
+                style="@style/containerView"
+                android:layout_marginStart="18dp"
+                android:layout_marginEnd="18dp"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cameras_in_row_layout">
+
+                <TextView
+                    android:id="@+id/change_pin_title"
+                    style="@style/textName"
+                    android:layout_width="0dp"
+                    android:layout_marginTop="18dp"
+                    android:layout_marginEnd="7dp"
+                    android:layout_marginBottom="18dp"
+                    android:text="@string/pin_code_change"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/select_arrow"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/select_arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_arrow_select"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/change_biometric_layout"
+                style="@style/containerView"
+                android:layout_marginStart="18dp"
+                android:layout_marginEnd="18dp"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/change_pin_layout">
+
+                <TextView
+                    android:id="@+id/change_biometric_title"
+                    style="@style/textName"
+                    android:layout_width="0dp"
+                    android:layout_marginTop="18dp"
+                    android:layout_marginEnd="7dp"
+                    android:layout_marginBottom="18dp"
+                    android:text="@string/biometric_entry_settings"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/switch_change_biometric"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Switch
+                    android:id="@+id/switch_change_biometric"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:thumb="@drawable/custom_switch_thumb"
+                    android:track="@drawable/custom_switch_track"
+                    app:layout_constraintBottom_toBottomOf="@+id/change_biometric_title"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/change_biometric_title"
+                    tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

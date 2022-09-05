@@ -1,0 +1,41 @@
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/background_gradient"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:overScrollMode="ifContentScrolls"
+    tools:context="ru.oversee.MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:id="@+id/fragment_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/border_top_bottom_nav_menu"
+            android:paddingTop="5dp"
+            app:elevation="0dp"
+            app:itemHorizontalTranslationEnabled="false"
+            app:itemIconSize="23dp"
+            app:itemIconTint="@color/bottom_navigation_item_background_colors"
+            app:itemTextAppearanceActive="@style/BottomNavigationView.Active"
+            app:itemTextAppearanceInactive="@style/BottomNavigationView"
+            app:itemTextColor="@color/bottom_navigation_item_background_colors"
+            app:labelVisibilityMode="labeled"
+            app:menu="@menu/activity_main_screen_bottom_menu" />
+
+    </RelativeLayout>
+
+    <include layout="@layout/camera_detail_popup" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
