@@ -27,7 +27,7 @@
 
 ![imgonline-com-ua-Resize-qvg1VsayGC7I5](https://user-images.githubusercontent.com/88910524/194798229-fc5db8e5-1e11-4933-a4ba-e17d946cd647.png)
 
-3. Добавление камеры.
+3. Добавление камеры
 
 ![imgonline-com-ua-Resize-fYM0xU91rd](https://user-images.githubusercontent.com/88910524/194798225-e39def21-ed76-4685-a89e-f05eda0d3c59.png)
 
